@@ -1,0 +1,63 @@
+Template Generation Task: Creating Structured Data Templates
+You will be given a class name (like "animal", "vehicle", or "building"). Your task is to create EXACTLY num_of_templates_per_class templates for this class, with a very specific output format requirement.
+Important Numerical Requirements:
+You must create EXACTLY num_of_templates_per_class template objects - no more and no fewer
+Each variable must have EXACTLY num_of_instances_per_kind diverse options - no more and no fewer
+Important Output Format Instruction:
+You must ONLY return the array content inside the square brackets [ ], WITHOUT including the class name. Do NOT include the class name or the colon in your response.
+Example of CORRECT Format:
+If given the class "person", you should output only this:
+[
+  {
+    "template": "kind_of_person wearing a kind_of_color kind_of_clothing",
+    "kind_of_person": ["woman", "man", "boy", "girl", "old man", "old woman", "black man", "black woman", "white man", "white woman", "ugly man", "ugly woman", "tall guy", "pretty woman", "fat boy", "skinny teen", "muscular woman", "bearded man", "redhead", "blonde woman"],
+    "kind_of_color": ["blue", "white", "gold", "red", "black", "brown", "neon green", "tie-dye", "paisley", "checkered", "polka dot", "iridescent", "camouflage", "glittery", "translucent", "ombre", "striped", "holographic", "metallic silver", "burnt orange"],
+    "kind_of_clothing": ["shirt", "dress", "sweater", "jacket", "hoodie", "t-shirt", "suit", "coat", "uniform", "robe", "tutu", "crop top", "sari", "kimono", "lederhosen", "kilt", "poncho", "overalls", "tuxedo", "leotard"]
+  },
+  {
+    "template": "kind_of_person with kind_of_attribute standing in a kind_of_location",
+    "kind_of_person": ["woman", "man", "boy", "girl", "old man", "old woman", "black man", "black woman", "white man", "white woman", "child", "teenager", "young adult", "elderly woman", "middle-aged man", "twin", "bodybuilder", "slim girl", "chubby boy", "tall teenager"],
+    "kind_of_attribute": ["glasses", "a hat", "long hair", "short hair", "a beard", "a backpack", "a scar", "a tattoo", "curly hair", "a smile", "a mohawk", "sunglasses", "braided hair", "an umbrella", "headphones", "a walking stick", "a camera", "a cigarette", "bright makeup", "a piercing"],
+    "kind_of_location": ["park", "street", "beach", "forest", "city", "market", "office", "school", "library", "restaurant", "colorful bathroom", "abandoned warehouse", "neon-lit arcade", "foggy cemetery", "tropical greenhouse", "cluttered attic", "retro diner", "industrial kitchen", "underground bunker", "misty waterfall"]
+  }
+]
+Use code with caution.
+Example of INCORRECT Format (Do NOT do this):
+❌ DO NOT include the class name:
+"car": [
+  {
+    ...
+  }
+]
+Use code with caution.
+Your Task:
+Create EXACTLY num_of_templates_per_class distinct templates for the class name you are given, following this structure:
+Each template must have a descriptive "template" field that uses variables with the prefix "kind_of_"
+Each variable mentioned in the template must have a corresponding array with EXACTLY num_of_instances_per_kind diverse options
+Make the templates diverse and cover different scenarios or descriptions
+Follow these specific guidelines:
+Make sure each template is realistic but includes diverse and occasionally unusual options
+Avoid generic/boring choices - include interesting specifics
+Create natural language templates that could be used to generate realistic descriptions
+Each template should have 3 variables
+Your response must be ONLY the JSON array containing EXACTLY num_of_templates_per_class template objects, like this:
+[
+  {
+    "template": "kind_of_X verb kind_of_Y in a kind_of_Z",
+    "kind_of_X": [...EXACTLY num_of_instances_per_kind options...],
+    "kind_of_Y": [...EXACTLY num_of_instances_per_kind options...],
+    "kind_of_Z": [...EXACTLY num_of_instances_per_kind options...]
+  },
+  // More template objects to reach EXACTLY num_of_templates_per_class total
+]
+Use code with caution.
+Double-check that:
+You've included ONLY the array content (no class name)
+Your JSON is correctly formatted
+All variables in templates have corresponding arrays
+All arrays have EXACTLY num_of_instances_per_kind diverse options
+You've created EXACTLY num_of_templates_per_class template objects
+Your templates are diverse and cover different aspects of the class
+Remember to be creative and think of templates that would generate interesting and varied descriptions when the variables are combined randomly!
+It's important that you will only focus on things that can be seen visually and effect the image, like different colours, add different objects, different and unique places, so every instance in your kind_of variables will make the image look different. No emotions or feelings that can't be seen.
+and regarding the templates - some of them should be simple and basic and some describe complex things, where the kind_of variable varies from a single word to quite a few words that fall under the same kind_of title. It's important that in some of your templates, the class is not the main character and in some of them the variables are not related to the class. for example, in some cases you want the variables to define different looks of the kind_of_person, but in some of them you want the template to be something about a kind_of_scene where a kind_of_vehicle can be seen with kind_of_a_description_of_a_person inside. and some cases where the variables are for the sentence structure. like kind_of_person_with_kind_of_clothes is kind_of_doing_something (eg, eating in a restaurant, walking down the street, building a sand castle in the sun).... so your templates should be more detailed and complex and creative than the examples
